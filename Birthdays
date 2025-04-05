@@ -1,0 +1,11 @@
+birthday1="3 May 2013"
+birthday2="10 April 2004"
+birthday3="14 March 1987"
+birthday4="8 August 1988"
+birthday5="5 September 2019"
+print(birthday1+' is my birthday')
+print(birthday2+' is my sisters birthday')
+print(birthday3+' is my mums birthday')
+print(birthday4,'is my dads birthday')
+print(birthday5, 'is my brothers birthday\n')
+print(birthday1+',', birthday2+',', birthday3+',', birthday4+',', birthday5+',', "is all our birthdays!")
