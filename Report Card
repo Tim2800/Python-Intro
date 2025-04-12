@@ -1,0 +1,19 @@
+science = 90
+mathematics =98
+sport = 59
+english = 72
+humanities = 95
+print("Report Card Subject Marks!")
+print("Science=",science)
+print("Mathematics=",mathematics)
+print("Sport=",sport)
+print("English=",english)
+print("Humanities=",humanities)
+sum1 = (science+mathematics+sport+english+humanities)
+sum2 = (90+98+59+72+95)
+print("sum=",sum1)
+print("sum=",sum2)
+average = (sum1/5)
+print("average=", average)
+percentage = (average*100)
+print("percentage=",percentage)

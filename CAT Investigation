@@ -1,0 +1,77 @@
+dead = ('PRESS RUN TO RESTART')
+deadr = ("Good job! You got the rarest death because you're dumb! This is an easter egg lol")
+#questions ;-; need a variety *sobs loudly from sleep deprivation*
+math1 = ('A goblin approaches you and asks you a question. "What is the simplified fraction of 0.2̅7̅?" ') #3/11
+math2 = ('A group of unicorns having teatime asks you a question if you want to pass. "What is the simplified ratio of 27:45?" ')#3:5
+word1 = ('A sphinx stands your way, and asks you "What goes up, but never comes down?": ') #your age
+word2 = ('A sphinx stands your way, and asks you "David' + "'"+'s parents have three children, John, Jessica and who?"') #David
+word3 = ('A vampire appears out of thin air. "Answer this question, then you'+"'"+'ll get past me. What gets bigger when more if it is taken away?" ')#hole
+word4 = ('A vampire appears out of thin air. "Answer this question correctly or you won'+"'"+'t see another day. If you’re running in a race and you pass the person in second place, what place are you in?" ')
+num1 = ('A fairy guards the door and says "If you want to get pass me, answer this question. What number is even, but not prime and is in between 1-5?" ') #4
+num2 = ('A fairy guards the door and says "Answer my question and you may pass. A boy is 2 years old. His brother is half as old as him. When the he is 100, how old will his brother be?" ')#99
+import sys
+import time
+def text(tex):
+  for char in tex:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(0.00001)
+text('''There are three doors in front of you, labeled A, B and C, surrounded by a forest.
+''')
+choice1 = (input('Pick one, any one, the choice is yours. '))
+#path 1
+if choice1 == 'A':
+  text('You have chosen A, proceed to the next challenge.')
+  time.sleep(2)
+  ask1 = (input('''
+A goblin approaches you and asks you a question. 
+"What is the simplified fraction of 0.2̅7̅?" '''))
+  if ask1 == '3/11':
+    walk1 = input('''"Well, well, good job," said the goblin.
+Now choose to go left or right in your adventure ''')
+    if walk1 == 'left':
+      word1 = input('A sphinx stands your way, and asks you "What goes up, but never comes down?": ')
+      if word1 == 'your age' or 'age':
+        print('''The sphinx looks flabberghasted, you got it right!
+You go forward to your next challenge''')
+      if word1 == 'age':
+        print('''The sphinx looks flabberghasted, you got it right!
+You go forward to your next challenge''')
+      else:
+        print('The sphinx chuckles at your mistake, you got it wrong!')
+        print(dead)
+    if walk1 == 'right': #choosing right
+      word2 == input('''A sphinx stands your way, and asks you 
+"David''' + "'"+'s parents have three children, John, Jessica and who?": ')
+      if word2 == 'David':
+        print('Good job, you have reached the final challenge, however no one said it would be easy 😂😂😂😂😂')
+    if walk1 == ' ': 
+      print("You didn't select the correct door. Next time choose left or right.")
+      print(dead)
+    else: #need to fix *sobs even more*
+      print("You didn't select the correct door. Next time choose left or right.")
+      print(dead)
+  
+  else:
+    print('The goblin laughs, you got it wrong! He swallows you up whole.')
+    print(dead)
+    
+elif choice1 == 'B': #path 2
+  print('You have selected B, walk over to the next challenge.')
+  num1 = input('''A fairy guards the bridge and says "If you want to get pass me, answer this question.
+What number is even, but not prime and is in between 1-5?" ''')
+  if num1 == '4':
+    print('The fairy steps aside, you may now cross the the bridge and reach the next obstacle')
+  else:
+    print('The fairy raises her wand, you got it wrong! She casts an eternal sleeping spell on you.')
+    print(dead)
+elif choice1 == 'C':
+  print('You have chosen C, proceed.')
+  
+elif choice1 == 'D':
+  print(deadr)
+  print(dead,('(Bruh.)'))
+else:
+  print('''You didn't select a proper door or forgot to write a capital,
+and the floor beneath you fell into spikes.''')
+  print(dead)
